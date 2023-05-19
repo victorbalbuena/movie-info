@@ -1,1 +1,93 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primario: #1073BA;
+  --secundario: #00DA55;
+  --gris: #3B3B3B;
+  --blanco: #FFFFFF;
+  --negro: #1F1E1E;
+  --grisClaro: #E1E1E1;
+
+  --separacion: 5rem;
+
+  --fuentePrincipal: 'Poppins', sans-serif;
+  --fuenteSecundaria: 'Rubik', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(74, 74, 74, .4);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--fuentePrincipal);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* Globales */
+.container {
+  max-width: 170rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  font-family: var(--fuenteSecundaria);
+  margin: calc(var(--separacion) / 2) 0;
+}
+
+h1 {
+  font-size: 4.4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.btn {
+  border: none;
+  background-color: var(--primario);
+  padding: .6rem;
+  color: var(--blanco);
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+/* Utilidades */
+.text-center {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}

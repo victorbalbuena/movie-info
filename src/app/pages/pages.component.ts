@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {SubSink} from "subsink";
+import {DefaultDataService} from "../services/default-data.service";
 
 @Component({
   selector: 'app-pages',

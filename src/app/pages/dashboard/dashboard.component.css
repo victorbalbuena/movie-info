@@ -1,0 +1,16 @@
+.movie-grid {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .movie-grid {
+    justify-content: center;
+  }
+}
+
+.cards {
+}

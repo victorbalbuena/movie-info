@@ -1,0 +1,15 @@
+.movie-card {
+  max-width: 17rem;
+  width: 17rem;
+  height: 30rem;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}

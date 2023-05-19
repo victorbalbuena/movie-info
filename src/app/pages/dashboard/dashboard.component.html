@@ -1,1 +1,19 @@
-<p>dashboard works!</p>
+<div class="container">
+  <div class="results">
+    <h4>Resultados de la busqueda:</h4>
+    <span>Realiza una búsqueda para comenzar</span>
+
+    <div class="movie-grid">
+      <ng-container *ngFor="let movie of movies">
+        <app-movie-card class="cards" [moviesData]="movie"></app-movie-card>
+      </ng-container>
+    </div>
+
+  </div>
+  <div class="favorites">
+    <h4>Favoritos:</h4>
+    <span>Las películas que agregues a favoritos aparecerán aquí</span>
+  </div>
+
+<!--  {{ movies | json }}-->
+</div>

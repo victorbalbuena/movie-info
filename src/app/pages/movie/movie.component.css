@@ -1,0 +1,75 @@
+* {
+  /*outline: 1px solid red;*/
+}
+
+.container {
+  max-width: 100rem;
+  width: 90%;
+}
+
+.movie {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0;
+  padding: 0 2.7rem;
+}
+
+.title span,
+.type span,
+.year span {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.title,
+.type,
+.year {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+
+  .controls {
+    padding: 0;
+  }
+
+  .movie {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .info {
+    width: 80%;
+    max-width: 50rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title span,
+  .type span,
+  .year span {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  .title,
+  .type,
+  .year {
+    font-size: 3rem;
+  }
+
+  .container {
+    max-width: 100rem;
+    width: 80%;
+  }
+
+}
