@@ -5,18 +5,21 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import {RouterLink, RouterLinkWithHref} from "@angular/router";
+import { HeaderCustomComponent } from './header-custom/header-custom.component';
 
 
 @NgModule({
   declarations: [
     BreadcrumbsComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    HeaderCustomComponent
   ],
   exports: [
     BreadcrumbsComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    HeaderCustomComponent
   ],
   imports: [
     CommonModule,

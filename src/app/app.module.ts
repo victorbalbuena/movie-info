@@ -23,9 +23,9 @@ import {SpinnerInterceptor} from "./shared/intercetors/spinner.interceptor";
         HttpClientModule,
         SharedModule
     ],
-  providers: [ DefaultDataService,
-    { provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true }
-  ],
+  providers: [ DefaultDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// { provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true }

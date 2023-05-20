@@ -10,7 +10,7 @@ const routes: Routes = [
     component: PagesComponent,
     children: [
       { path: '', component: DashboardComponent },
-      { path: ':id', component:  MovieComponent}
+      { path: ':id', component:  MovieComponent }
     ]
   }
 ];
