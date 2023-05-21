@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import {RouterLink, RouterLinkWithHref} from "@angular/router";
 import { HeaderCustomComponent } from './header-custom/header-custom.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 
 @NgModule({
@@ -13,13 +14,15 @@ import { HeaderCustomComponent } from './header-custom/header-custom.component';
     BreadcrumbsComponent,
     HeaderComponent,
     SidebarComponent,
-    HeaderCustomComponent
+    HeaderCustomComponent,
+    SearchBarComponent
   ],
   exports: [
     BreadcrumbsComponent,
     HeaderComponent,
     SidebarComponent,
-    HeaderCustomComponent
+    HeaderCustomComponent,
+    SearchBarComponent
   ],
   imports: [
     CommonModule,

@@ -16,7 +16,7 @@ export class ConnectionApiService {
   ) { }
 
   getMovieByName(name: string) {
-    return this.http.get<movie[]>(
+    return this.http.get(
       `${environment.OMDbAPI}/?s=${name}&apikey=${environment.OMDbKEY}`
     );
   }

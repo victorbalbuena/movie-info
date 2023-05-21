@@ -1,5 +1,5 @@
 <div class="movie-card" *ngIf="moviesData">
-  <a routerLink="/movie/{{moviesData?.imdbID}}">
+  <a routerLink="/movie/{{moviesData.imdbID}}">
     <img class="movie-img" src="{{ moviesData.Poster }}" alt="">
   </a>
   <span class="title">{{ moviesData.Title }}</span>

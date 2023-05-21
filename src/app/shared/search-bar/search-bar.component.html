@@ -1,0 +1,14 @@
+<div class="search">
+  <div class="search-input-container">
+    <input type="text" placeholder="Buscar" (keyup)="getMovieList($event)" #search>
+  </div>
+  <div class="results" *ngIf="movies">
+    <div class="result-items">
+      <ul>
+        <li *ngFor="let movie of movies" class="item" (click)="redirectTo(movie.imdbID)">
+          {{ movie.Title }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
