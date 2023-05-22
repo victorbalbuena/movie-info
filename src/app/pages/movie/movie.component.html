@@ -1,17 +1,22 @@
 <div class="container movie-info" *ngIf="movie">
-  <div class="controls">
-    <button routerLink="/movie" class="btn">Go Back</button>
-    <button class="btn">Add to favs</button>
-  </div>
   <div class="movie">
     <div class="poster">
-      <img src="{{ movie.Poster }}" alt="">
+      <img src="{{ movie.Poster }}" alt="poster">
     </div>
     <div class="info">
       <div class="text">
         <p class="title"><span>Titulo: </span>{{ movie.Title }}</p>
         <p class="type"><span>Tipo: </span>{{ movie.Type }}</p>
         <p class="year"><span>Año: </span>{{ movie.Year }}</p>
+        <div class="plot">
+          {{ movie.Plot }}
+        </div>
+        <div class="ratings" *ngIf="movie.Ratings?.length">
+          <h3>Ratings</h3>
+          <ul>
+            <li class="rating-item" *ngFor="let rating of movie.Ratings">{{ rating.Source }} - {{ rating.Value }}</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

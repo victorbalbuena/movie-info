@@ -4,7 +4,7 @@ import { Page404Component } from './page404/page404.component';
 import { PagesRoutingModule } from './pages/pages-routing.module';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/movie', pathMatch: 'full' },
   { path: '**', component: Page404Component },
 ];
 

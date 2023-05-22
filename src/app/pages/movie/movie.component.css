@@ -3,8 +3,17 @@
 }
 
 .container {
-  max-width: 100rem;
-  width: 90%;
+  /*max-width: 100rem;*/
+  /*width: 90%;*/
+  padding-top: 2rem;
+}
+
+@media (min-width: 768px) {
+
+  .container {
+    padding-top: 5rem;
+  }
+
 }
 
 .movie {
@@ -12,13 +21,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.controls {
-  display: flex;
-  justify-content: space-between;
-  margin: 3rem 0;
-  padding: 0 2.7rem;
 }
 
 .title span,
@@ -34,20 +36,19 @@
   font-size: 2rem;
 }
 
-@media (min-width: 768px) {
+.info {
+  padding: 0 2rem;
+}
 
-  .controls {
-    padding: 0;
-  }
+@media (min-width: 768px) {
 
   .movie {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .info {
-    width: 80%;
-    max-width: 50rem;
+    width: 100%;
 
     display: flex;
     justify-content: center;
@@ -57,14 +58,17 @@
   .title span,
   .type span,
   .year span {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 600;
   }
 
   .title,
   .type,
   .year {
-    font-size: 3rem;
+    font-size: 2.3rem;
+
+    padding: 0;
+    margin: 0;
   }
 
   .container {
@@ -72,4 +76,21 @@
     width: 80%;
   }
 
+}
+
+/* Ratings */
+
+.ratings {
+  padding: 2rem 0 0;
+}
+
+.ratings h3 {
+  display: inline;
+}
+
+.ratings ul {
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 0;
 }

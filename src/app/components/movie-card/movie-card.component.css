@@ -1,15 +1,32 @@
 .movie-card {
   max-width: 17rem;
   width: 17rem;
-  height: 30rem;
+  height: 29rem;
 
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-bottom: 1rem;
+
+  transition: transform .3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.1);
 }
 
 .movie-img {
   width: 100%;
-  height: 80%;
+  height: 90%;
   object-fit: cover;
+}
+
+.movie-img:hover {
+
+}
+
+.title {
+  display: block;
+  padding: .3rem 0 0;
+  font-size: 1.6rem;
 }

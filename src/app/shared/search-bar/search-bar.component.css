@@ -102,3 +102,13 @@
 
   border-bottom: 1px solid var(--grisClaro);
 }
+
+.item {
+  display: flex;
+  align-items: stretch;
+}
+
+.item img {
+  height: 4rem;
+  margin-right: 1rem;
+}

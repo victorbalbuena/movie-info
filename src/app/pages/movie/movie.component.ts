@@ -32,6 +32,7 @@ export class MovieComponent implements OnInit, OnDestroy {
       this.movieDataHttp.getMovieById(this.id)
         .subscribe((data) => {
           this.movie = data;
+          console.log(this.movie);
         })
     );
   }
