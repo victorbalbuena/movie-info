@@ -44,7 +44,7 @@ export class SearchBarComponent implements OnInit {
 
   redirectTo(id: string = '') {
     this.router.navigateByUrl('/', { skipLocationChange: true}).then(() => {
-      this.router.navigate([`/movie/${id}`]);
+      this.router.navigate([`/movie/show/${id}`]);
     });
     this.movies = [];
   }

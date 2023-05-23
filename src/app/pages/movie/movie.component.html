@@ -1,22 +1,36 @@
 <div class="container movie-info" *ngIf="movie">
   <div class="movie">
     <div class="poster">
-      <img src="{{ movie.Poster }}" alt="poster" *ngIf="movie.Poster && movie.Poster !== 'N/A'">
-      <img src="../../../assets/images/unknown.png" alt="poster" *ngIf="movie.Poster === 'N/A'">
+      <img src="{{ movie.Poster }}"
+           alt="poster"
+           *ngIf="movie.Poster && movie.Poster !== 'N/A'">
+      <img src="../../../assets/images/unknown.png"
+           alt="poster"
+           *ngIf="movie.Poster === 'N/A'">
       <div class="add-favorite text-center">
-        <button class="btn btn-favorite" *ngIf="!isAFavorite" (click)="addFavorite()">
+        <button class="btn btn-favorite"
+                *ngIf="!isAFavorite"
+                (click)="addFavorite()"
+        >
           Agregar a favoritos
         </button>
-        <button class="btn btn-remove-favorite" *ngIf="isAFavorite" (click)="removeFavorite()">
+        <button class="btn btn-remove-favorite"
+                *ngIf="isAFavorite"
+                (click)="removeFavorite()"
+        >
           Quitar de favoritos
         </button>
       </div>
     </div>
     <div class="info">
       <div class="text">
-        <p class="title"><span>Titulo: </span>{{ movie.Title }}</p>
-        <p class="type"><span>Tipo: </span>{{ movie.Type }}</p>
-        <p class="year"><span>Año: </span>{{ movie.Year }}</p>
+        <p class="title" *ngIf="movie.Title !== 'N/A'"><span>Titulo: </span>{{ movie.Title }}</p>
+        <p class="genre" *ngIf="movie.Genre !== 'N/A'"><span>Genéro: </span>{{ movie.Genre }}</p>
+        <p class="type" *ngIf="movie.Type !== 'N/A'"><span>Tipo: </span>{{ movie.Type }}</p>
+        <p class="year" *ngIf="movie.Year !== 'N/A'"><span>Año: </span>{{ movie.Year }}</p>
+        <p class="boxOffice" *ngIf="movie.BoxOffice !== 'N/A'"><span>Recaudación: </span>{{ movie.BoxOffice }}</p>
+        <p class="runtime" *ngIf="movie.Runtime !== 'N/A'"><span>Duración: </span>{{ movie.Runtime }}</p>
+        <p class="language" *ngIf="movie.Language !== 'N/A'"><span>Idioma: </span>{{ movie.Language }}</p>
         <div class="plot">
           <h3>Sinopsis</h3>
           <div>
@@ -26,7 +40,11 @@
         <div class="ratings" *ngIf="movie.Ratings?.length">
           <h3>Ratings</h3>
           <ul>
-            <li class="rating-item" *ngFor="let rating of movie.Ratings">{{ rating.Source }} - {{ rating.Value }}</li>
+            <li class="rating-item"
+                *ngFor="let rating of movie.Ratings"
+            >
+              {{ rating.Source }} - {{ rating.Value }}
+            </li>
           </ul>
         </div>
       </div>

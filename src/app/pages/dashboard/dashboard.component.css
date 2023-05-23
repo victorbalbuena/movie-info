@@ -1,3 +1,7 @@
+* {
+  /*outline: 1px solid red;*/
+}
+
 .movie-grid {
   display: flex;
   flex-wrap: wrap;
@@ -5,17 +9,28 @@
   justify-content: center;
 }
 
-/*@media (min-width: 768px) {*/
-/*  .movie-grid {*/
-/*    justify-content: center;*/
-/*  }*/
-/*}*/
+@media (min-width: 768px) {
+
+  .movie-grid {
+    justify-content: unset;
+  }
+
+}
+
+.results {
+  text-align: center;
+}
 
 h4 {
   font-size: 1.8rem;
+  margin: 2rem 0;
 }
 
 @media (min-width: 768px) {
+
+  .results {
+    text-align: unset;
+  }
 
   h4 {
     font-size: 2rem;

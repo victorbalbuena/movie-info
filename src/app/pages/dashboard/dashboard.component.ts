@@ -24,7 +24,6 @@ export class DashboardComponent implements OnInit {
     this.subSink.add(
       this.defaultHttp.getDefaultData()
         .subscribe((data) => {
-          console.log(data);
           this.movies = data;
         })
     );

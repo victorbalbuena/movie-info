@@ -1,4 +1,4 @@
-.header {
+.header-elements {
     display: flex;
     justify-content: space-between;
     padding: 1.6rem 1.5rem 1rem;
@@ -9,10 +9,16 @@
 
 @media (min-width: 768px) {
 
-    .header {
-      padding: 1.6rem 3rem;
-      border-bottom: 1px solid var(--grisClaro);
-    }
+  .header {
+    border-bottom: 1px solid var(--grisClaro);
+  }
+
+  .header-elements {
+    padding: 1.6rem 3rem;
+    max-width: 190rem;
+    width: 95%;
+    margin: 0 auto;
+  }
 
 }
 
