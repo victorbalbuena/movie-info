@@ -1,7 +1,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 1.7rem 1.5rem 1rem;
+    padding: 1.6rem 1.5rem 1rem;
     align-items: center;
     gap: 2rem;
     background-color: var(--blanco);
@@ -10,14 +10,14 @@
 @media (min-width: 768px) {
 
     .header {
-        padding: 2rem 3rem;
+      padding: 1.6rem 3rem;
       border-bottom: 1px solid var(--grisClaro);
     }
 
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 900;
     cursor: pointer;
 }
@@ -90,4 +90,12 @@ a {
     display: none;
   }
 
+}
+
+/* items */
+
+.option-item {
+  font-size: 2.3rem;
+  margin-left: 1.2rem;
+  cursor: pointer;
 }

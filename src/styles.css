@@ -1,10 +1,13 @@
 :root {
   --primario: #1073BA;
+  --primarioOscuro: #0c5a91;
   --secundario: #00DA55;
   --gris: #3B3B3B;
   --blanco: #FFFFFF;
   --negro: #1F1E1E;
   --grisClaro: #E1E1E1;
+  --rojo: #da4545;
+  --rojoOscuro: #af1f1f;
 
   --separacion: 5rem;
 
@@ -45,6 +48,7 @@ body {
   max-width: 170rem;
   width: 90%;
   margin: 0 auto;
+  padding-bottom: 2rem;
 }
 
 h1,
@@ -74,13 +78,22 @@ img {
 
 .btn {
   border: none;
-  background-color: var(--primario);
-  padding: .6rem;
+  border-radius: .5rem;
+  padding: 1.2rem;
   color: var(--blanco);
+  font-size: 1.8rem;
 }
 
 .btn:hover {
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+
+  .btn {
+    padding: 1rem;
+  }
+
 }
 
 /* Utilidades */

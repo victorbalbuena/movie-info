@@ -14,7 +14,10 @@ export class MovieCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.moviesData)
+    console.log(this.moviesData);
+    if (this.moviesData?.Poster === 'N/A') {
+      console.log('here');
+    }
   }
 
 }

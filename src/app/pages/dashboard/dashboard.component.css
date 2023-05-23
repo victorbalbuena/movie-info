@@ -2,13 +2,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
 }
 
-@media (max-width: 768px) {
-  .movie-grid {
-    justify-content: center;
-  }
-}
+/*@media (min-width: 768px) {*/
+/*  .movie-grid {*/
+/*    justify-content: center;*/
+/*  }*/
+/*}*/
 
 h4 {
   font-size: 1.8rem;

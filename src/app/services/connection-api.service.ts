@@ -10,9 +10,7 @@ import {environment} from "../../environments/environment";
 export class ConnectionApiService {
 
   constructor(
-    private http: HttpClient,
-    private router: Router,
-    private route: ActivatedRoute
+    private http: HttpClient
   ) { }
 
   getMovieByName(name: string) {

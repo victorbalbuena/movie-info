@@ -1,0 +1,11 @@
+<div class="container">
+  <h3>Favoritos</h3>
+
+  <p *ngIf="!favorites?.length">Las películas que agregues a Favoritos aparecerán aquí</p>
+
+  <div class="movie-grid" *ngIf="favorites">
+    <ng-container *ngFor="let favorite of favorites">
+      <app-movie-card class="cards" [moviesData]="favorite"></app-movie-card>
+    </ng-container>
+  </div>
+</div>

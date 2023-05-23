@@ -1,0 +1,14 @@
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+
+  .movie-grid {
+    justify-content: start;
+  }
+
+}

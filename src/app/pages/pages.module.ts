@@ -9,17 +9,21 @@ import { ComponentsModule } from '../components/components.module';
 import {DefaultDataService} from "../services/default-data.service";
 import { MovieComponent } from './movie/movie.component';
 import {SpinnerModule} from "../shared/spinner/spinner.module";
+import { FavoritesComponent } from './favorites/favorites.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
     PagesComponent,
-    MovieComponent
+    MovieComponent,
+    FavoritesComponent
   ],
   exports: [
     DashboardComponent,
     PagesComponent,
+    MovieComponent,
+    FavoritesComponent
   ],
     imports: [CommonModule, SharedModule, RouterModule, ComponentsModule, SpinnerModule],
   providers: [ DefaultDataService ]

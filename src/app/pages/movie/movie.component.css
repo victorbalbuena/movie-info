@@ -84,7 +84,7 @@
   padding: 2rem 0 0;
 }
 
-.ratings h3 {
+h3 {
   display: inline;
 }
 
@@ -93,4 +93,47 @@
   display: block;
   margin: 0;
   padding: 0;
+}
+
+/* Add to favorites */
+
+.add-favorite {
+  margin-top: 1.3rem;
+}
+
+@media (min-width: 768px) {
+
+  .add-favorite {
+
+  }
+
+}
+
+.btn-favorite {
+  color: var(--blanco);
+  background-color: var(--primario);
+  transition: background-color .3s;
+}
+
+.btn-favorite:hover {
+  color: var(--blanco);
+  background-color: var(--primarioOscuro);
+}
+
+.btn-remove-favorite {
+  color: var(--blanco);
+  background-color: var(--rojo);
+  transition: background-color .3s;
+}
+
+.btn-remove-favorite:hover {
+  color: var(--blanco);
+  background-color: var(--rojoOscuro);
+}
+
+/* Poster */
+
+.poster img {
+  max-height: 40rem;
+  margin: 0 auto;
 }

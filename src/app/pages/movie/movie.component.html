@@ -1,7 +1,16 @@
 <div class="container movie-info" *ngIf="movie">
   <div class="movie">
     <div class="poster">
-      <img src="{{ movie.Poster }}" alt="poster">
+      <img src="{{ movie.Poster }}" alt="poster" *ngIf="movie.Poster && movie.Poster !== 'N/A'">
+      <img src="../../../assets/images/unknown.png" alt="poster" *ngIf="movie.Poster === 'N/A'">
+      <div class="add-favorite text-center">
+        <button class="btn btn-favorite" *ngIf="!isAFavorite" (click)="addFavorite()">
+          Agregar a favoritos
+        </button>
+        <button class="btn btn-remove-favorite" *ngIf="isAFavorite" (click)="removeFavorite()">
+          Quitar de favoritos
+        </button>
+      </div>
     </div>
     <div class="info">
       <div class="text">
@@ -9,7 +18,10 @@
         <p class="type"><span>Tipo: </span>{{ movie.Type }}</p>
         <p class="year"><span>Año: </span>{{ movie.Year }}</p>
         <div class="plot">
-          {{ movie.Plot }}
+          <h3>Sinopsis</h3>
+          <div>
+            {{ movie.Plot }}
+          </div>
         </div>
         <div class="ratings" *ngIf="movie.Ratings?.length">
           <h3>Ratings</h3>

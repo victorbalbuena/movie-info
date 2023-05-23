@@ -1,6 +1,7 @@
 <div class="movie-card" *ngIf="moviesData">
   <a routerLink="/movie/{{moviesData.imdbID}}">
-    <img class="movie-img" src="{{ moviesData.Poster }}" alt="">
+    <img class="movie-img" src="{{ moviesData.Poster }}" alt="poster" *ngIf="moviesData.Poster && moviesData.Poster !== 'N/A'">
+    <img class="movie-img" src="../../../assets/images/unknown.png" alt="poster" *ngIf="moviesData.Poster === 'N/A'">
   </a>
   <span class="title">{{ moviesData.Title }}</span>
 </div>
