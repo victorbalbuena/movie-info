@@ -1,32 +1,44 @@
-.header-404 {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem 1.5rem;
-  align-items: center;
-  gap: 2rem;
-  border-bottom: 1px solid var(--grisClaro);
+.container {
+  width: 90%;
+  max-width: 100rem;
+  border-radius: 1rem;
+  margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-
-  .header-404 {
-    padding: 2rem 3rem;
-  }
-
+.page-404 {
+  max-width: 60rem;
+  text-align: center;
 }
 
-.logo {
-  font-size: 2.5rem;
-  font-weight: 900;
-}
-
-@media (min-width: 768px) {
-
-  .logo {
-    font-size: 3rem;
-  }
-}
-
-.logo span {
+.page-404 h2 {
+  font-size: 10rem;
   color: var(--primario);
+}
+
+@media (min-width: 768px) {
+  .page-404 h2 {
+    font-size: 20rem;
+    color: var(--primario);
+  }
+}
+
+.page-404 h4 {
+  position: relative;
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  display: inline-block;
+}
+
+.page-404 p {
+  font-size: 2rem;
+}
+
+.btn-back {
+  background-color: var(--primario);
+  transition: background-color .3s ease;
+}
+
+.btn-back:hover {
+  background-color: var(--primarioOscuro);
 }
