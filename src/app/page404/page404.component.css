@@ -3,6 +3,7 @@
   max-width: 100rem;
   border-radius: 1rem;
   margin: 0 auto;
+  padding-top: 10rem;
 }
 
 .page-404 {
@@ -12,33 +13,27 @@
 
 .page-404 h2 {
   font-size: 10rem;
-  color: var(--primario);
+  color: var(--primary);
+  margin: 0;
 }
 
 @media (min-width: 768px) {
   .page-404 h2 {
     font-size: 20rem;
-    color: var(--primario);
+    color: var(--primary);
   }
 }
 
 .page-404 h4 {
   position: relative;
   font-size: 3rem;
-  margin: 0 0 1rem 0;
-  padding: 1rem;
+  margin: 0 0 3rem 0;
   display: inline-block;
+  padding: 0;
 }
 
 .page-404 p {
   font-size: 2rem;
-}
-
-.btn-back {
-  background-color: var(--primario);
-  transition: background-color .3s ease;
-}
-
-.btn-back:hover {
-  background-color: var(--primarioOscuro);
+  padding: 0;
+  margin: 0 0 3rem;
 }

@@ -1,163 +1,171 @@
 * {
-  /*outline: 1px solid red;*/
+  /*outline: 1px solid #00DA55;*/
 }
 
-.container {
-  /*max-width: 100rem;*/
-  /*width: 90%;*/
-  padding-top: 2rem;
-}
-
-@media (min-width: 768px) {
-
-  .container {
-    padding-top: 5rem;
-  }
-
+.movie-info {
+  width: 90%;
+  max-width: 130rem;
+  margin: 4rem auto 0;
 }
 
 .movie {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.text p span {
-  font-size: 2.2rem;
-  font-weight: 600;
-}
-
-.text p {
-  font-size: 2rem;
-  margin: 0 0 1rem 0;
-}
-
-.info {
-  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: 768px) {
 
   .movie {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .info {
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 2rem;
-  }
-
-  .text p span {
-    font-size: 2.2rem;
-    font-weight: 600;
-  }
-
-  .text p {
-    font-size: 2.3rem;
-    padding: 0;
-    margin: 0 0 .5rem 0;
-  }
-
-  .container {
-    max-width: 80rem;
-    width: 80%;
+    grid-template-columns: 2fr 2fr;
   }
 
 }
 
-@media (min-width: 1024px) {
-  .container {
-    max-width: 90rem;
-    width: 90%;
-  }
+.poster {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  margin: 0 auto;
 }
 
-/* Plot */
-
-.plot {
-  margin-top: 3rem;
-}
-
-.plot h3 {
-  font-size: 2.4rem;
-}
-
-/* Ratings */
-
-.ratings {
-  padding: 2rem 0 0;
-}
-
-.ratings h3 {
-  font-size: 2.4rem;
+.poster img {
+  border: .3rem solid var(--primary);
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
 
-  .plot h3,
-  .ratings h3 {
-    font-size: 2.8rem;
-    font-weight: 600;
+  .poster {
+    width: 30rem;
   }
 
 }
 
-h3 {
-  display: inline;
+/* Texts */
+
+.info {
+  padding-top: 3rem;
+  text-align: start;
 }
 
-.ratings ul {
+@media (min-width: 768px) {
+  .info {
+    text-align: unset;
+    padding-top: 0;
+  }
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--primary);
+}
+
+.movie-general-info {
+  margin: 3rem 0 .5rem 0;
+  font-size: 1.8rem;
+}
+
+.text p {
+  margin: 1rem 0 .5rem 0;
+  font-size: 1.8rem;
+}
+
+.rated {
+  background-color: var(--yellow);
+  padding: .7rem;
+  color: var(--white);
+  margin-left: 1rem;
+}
+
+.language {
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--black);
+}
+
+.language span {
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: var(--primary);
+}
+
+@media (min-width: 768px) {
+
+  .movie-general-info {
+    margin: 1rem 0 .5rem 0;
+  }
+
+  .title {
+    text-align: unset;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .language span,
+  .language {
+    font-size: 2rem;
+  }
+
+  .text p,
+  .movie-general-info{
+    font-size: 2rem;
+  }
+
+}
+
+/*Icons*/
+i {
+  margin-right: .5rem;
+  color: var(--primary);
+}
+
+/* ratings, plot and language */
+
+.ratings h3,
+.plot h3,
+.language h3 {
+  margin-bottom: .5rem;
+  color: var(--primary);
+}
+
+.plot div,
+.language div {
+  font-size: 1.8rem;
+}
+
+@media (min-width: 768px) {
+  .plot div,
+  .language div {
+    font-size: 2rem;
+  }
+}
+
+.ratings ul{
   list-style: none;
-  display: block;
   margin: 0;
   padding: 0;
 }
 
-/* Add to favorites */
-
-.add-favorite {
-  margin-top: 1.3rem;
+.ratings ul li{
+  font-size: 1.8rem;
 }
 
 @media (min-width: 768px) {
-
-  .add-favorite {
-
+  .ratings ul li{
+    font-size: 2rem;
   }
-
 }
 
-.btn-favorite {
-  color: var(--blanco);
-  background-color: var(--primario);
-  transition: background-color .3s;
-}
+/**/
 
-.btn-favorite:hover {
-  color: var(--blanco);
-  background-color: var(--primarioOscuro);
-}
-
-.btn-remove-favorite {
-  color: var(--blanco);
-  background-color: var(--rojo);
-  transition: background-color .3s;
-}
-
-.btn-remove-favorite:hover {
-  color: var(--blanco);
-  background-color: var(--rojoOscuro);
-}
-
-/* Poster */
-
-.poster img {
-  max-height: 40rem;
-  margin: 0 auto;
+.genre span,
+.release,
+.year span,
+.boxOffice span,
+.runtime span,
+.actors span
+{
+  font-weight: 600;
 }

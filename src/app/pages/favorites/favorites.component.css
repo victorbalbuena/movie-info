@@ -5,10 +5,28 @@
   justify-content: center;
 }
 
+.container h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.container p {
+  font-size: 1.8rem;
+}
+
 @media (min-width: 768px) {
 
   .movie-grid {
     justify-content: start;
+  }
+
+  .container h2 {
+    font-size: 2.8rem;
+    text-align: unset;
+  }
+
+  .container p {
+    font-size: 2rem;
   }
 
 }

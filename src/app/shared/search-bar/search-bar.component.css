@@ -12,7 +12,7 @@
 
 .search-mobile {
   text-align: center;
-  background-color: var(--blanco);
+  background-color: var(--white);
   padding: 1.3rem 0;
 }
 
@@ -100,7 +100,7 @@
   padding: 1rem;
   cursor: pointer;
 
-  border-bottom: 1px solid var(--grisClaro);
+  border-bottom: 1px solid var(--lightGrey);
 }
 
 .item {

@@ -8,35 +8,47 @@
            alt="poster"
            *ngIf="movie.Poster === 'N/A'">
       <div class="add-favorite text-center">
-        <button class="btn btn-favorite"
+        <button class="btn btn-primary"
                 *ngIf="!isAFavorite"
                 (click)="addFavorite()"
         >
-          Agregar a favoritos
+          Add to favorites
         </button>
-        <button class="btn btn-remove-favorite"
+        <button class="btn btn-danger"
                 *ngIf="isAFavorite"
                 (click)="removeFavorite()"
         >
-          Quitar de favoritos
+          Remove to favorites
         </button>
       </div>
     </div>
     <div class="info">
       <div class="text">
-        <p class="title" *ngIf="movie.Title !== 'N/A'"><span>Titulo: </span>{{ movie.Title }}</p>
-        <p class="genre" *ngIf="movie.Genre !== 'N/A'"><span>Genéro: </span>{{ movie.Genre }}</p>
-        <p class="type" *ngIf="movie.Type !== 'N/A'"><span>Tipo: </span>{{ movie.Type }}</p>
-        <p class="year" *ngIf="movie.Year !== 'N/A'"><span>Año: </span>{{ movie.Year }}</p>
-        <p class="boxOffice" *ngIf="movie.BoxOffice !== 'N/A'"><span>Recaudación: </span>{{ movie.BoxOffice }}</p>
-        <p class="runtime" *ngIf="movie.Runtime !== 'N/A'"><span>Duración: </span>{{ movie.Runtime }}</p>
-        <p class="language" *ngIf="movie.Language !== 'N/A'"><span>Idioma: </span>{{ movie.Language }}</p>
-        <div class="plot">
-          <h3>Sinopsis</h3>
+        <span class="title" *ngIf="movie.Title !== 'N/A'">{{ movie.Title }}</span>
+
+        <div class="movie-general-info">
+          <span class="release">Release:</span> {{ movie.Released }} <span class="rated">Rated: {{ movie.Rated }}</span>
+        </div>
+
+        <p class="genre" *ngIf="movie.Genre !== 'N/A'"><span>Genre: </span>{{ movie.Genre }}</p>
+        <p class="year" *ngIf="movie.Year !== 'N/A'"><span>Year: </span>{{ movie.Year }}</p>
+        <p class="boxOffice" *ngIf="movie.BoxOffice !== 'N/A'"><span>Box Office: </span>{{ movie.BoxOffice }}</p>
+        <p class="runtime" *ngIf="movie.Runtime !== 'N/A'"><span>Runtime: </span>{{ movie.Runtime }}</p>
+        <p class="actors" *ngIf="movie.Actors !== 'N/A'"><span>Actors: </span>{{movie.Actors}}</p>
+        <p class="awards" *ngIf="movie.Awards !== 'N/A'"><i class="fa fa-trophy"></i>{{ movie.Awards }}</p>
+        <div class="plot" *ngIf="movie.Plot !== 'N/A'">
+          <h3>Plot</h3>
           <div>
             {{ movie.Plot }}
           </div>
         </div>
+        <div class="language" *ngIf="movie.Language !== 'N/A'">
+          <h3>Language</h3>
+          <div>
+            {{ movie.Language }}
+          </div>
+        </div>
+<!--        <p class="language" *ngIf="movie.Language !== 'N/A'"><span>Language: </span></p>-->
         <div class="ratings" *ngIf="movie.Ratings?.length">
           <h3>Ratings</h3>
           <ul>

@@ -4,7 +4,7 @@ import {ConnectionApiService} from "../../services/connection-api.service";
 import {movie} from "../../../_core/models/movie.model";
 import {ActivatedRoute, Router} from "@angular/router";
 import {LocalStorageService} from "../../services/local-storage.service";
-import {map} from "rxjs";
+import {catchError, map, of} from "rxjs";
 
 @Component({
   selector: 'app-movie',
@@ -41,8 +41,12 @@ export class MovieComponent implements OnInit, OnDestroy {
         .getMovieById(this.id)
         .pipe(
           map((data) => {
-             this.movie = data;
-             this.checkFavorite();
+            this.movie = data;
+            // @ts-ignore
+            if (data.Error) {
+              this.router.navigate(['/']);
+            }
+            this.checkFavorite();
           })
         )
         .subscribe()
