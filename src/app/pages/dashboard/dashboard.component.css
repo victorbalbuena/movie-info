@@ -2,17 +2,26 @@
   /*outline: 1px solid red;*/
 }
 
+.movie-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
 .movie-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
+
 }
 
 @media (min-width: 768px) {
 
   .movie-grid {
-    justify-content: unset;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    width: 100%;
   }
 
 }

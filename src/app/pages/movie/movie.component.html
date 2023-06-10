@@ -27,7 +27,7 @@
         <span class="title" *ngIf="movie.Title !== 'N/A'">{{ movie.Title }}</span>
 
         <div class="movie-general-info">
-          <span class="release">Release:</span> {{ movie.Released }} <span class="rated">Rated: {{ movie.Rated }}</span>
+          <span class="release">Release:</span> {{ movie.Released }} <span class="rated" *ngIf="movie.Rated !== 'NA' && movie.Rated !== 'Not Rated'">Rated: {{ movie.Rated }}</span>
         </div>
 
         <p class="genre" *ngIf="movie.Genre !== 'N/A'"><span>Genre: </span>{{ movie.Genre }}</p>

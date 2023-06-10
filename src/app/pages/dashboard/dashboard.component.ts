@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import {SubSink} from "subsink";
 import {DefaultDataService} from "../../services/default-data.service";
 import {movie} from "../../../_core/models/movie.model";
@@ -8,7 +8,7 @@ import {movie} from "../../../_core/models/movie.model";
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, OnDestroy {
 
   movies: movie[] = [];
 
@@ -27,6 +27,10 @@ export class DashboardComponent implements OnInit {
           this.movies = data;
         })
     );
+  }
+
+  ngOnDestroy(): void {
+    this.subSink.unsubscribe();
   }
 
 }
