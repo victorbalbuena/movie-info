@@ -1,7 +1,6 @@
 .movie-card {
-  max-width: 20rem;
-  width: 20rem;
-  height: 29rem;
+  width: 15rem;
+  height: 23rem;
 
   white-space: nowrap;
   overflow: hidden;
@@ -17,6 +16,14 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
+}
+
+@media (min-width: 768px) {
+  .movie-card {
+    max-width: 20rem;
+    width: 20rem;
+    height: 29rem;
+  }
 }
 
 .movie-card:hover {
